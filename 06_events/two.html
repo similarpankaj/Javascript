@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayPankaj = function(){
+        console.log('Pankaj')
+    }
+    const changeText = function(){document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+    const changes = setTimeout(changeText, 2000);
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(changes)
+    })
+</script>
+</html>
